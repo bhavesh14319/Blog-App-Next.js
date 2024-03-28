@@ -1,0 +1,53 @@
+.blogcard{
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);    
+    position: relative;
+
+}
+
+.deleteIcon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    /* background-color: red; */
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.blogImage{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.blogImage img{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.blogTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.blogDescription{
+    margin-bottom: 10px;
+}
+.authorText{
+    text-align: right;
+}
+
+@media screen and (max-width:700px) {
+    .blogImage img{
+        min-height: 200px;
+    }   
+}
