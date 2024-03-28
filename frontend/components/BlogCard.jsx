@@ -8,7 +8,6 @@ import { deleteBlog } from '@/Actions/Blog'
 import Swal from 'sweetalert2'
 import { useRouter } from 'next/router'
 
-
 const BlogCard = ({title,author,imageUrl,description,blogId,isOwner}) => {
     const router = useRouter();
 
