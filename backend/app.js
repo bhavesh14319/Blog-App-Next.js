@@ -9,7 +9,7 @@ const blogRouter = require("./Routes/Blog")
 
 dotenv.config();
 
-let allowedDomains = ['http://localhost:3000', 'https://bloggle-next-vercel.app'];
+let allowedDomains = ['http://localhost:3000', 'https://bloggle-next.vercel.app'];
 app.use(cors({
     // origin: 'http://localhost:3000',
     // origin:'*',
