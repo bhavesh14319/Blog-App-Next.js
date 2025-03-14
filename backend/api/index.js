@@ -12,10 +12,13 @@ cloudinary.config({
   api_secret: "DHSgyPTnPS59EawXBdgAXQ4J2Vw"
 });
 
-connectDatabase().then(()=>{
-    app.listen(process.env.PORT,()=>{
-        console.log('server running on port ', process.env.PORT);
-    })
-})
+// connectDatabase().then(()=>{
+//     app.listen(process.env.PORT,()=>{
+//         console.log('server running on port ', process.env.PORT);
+//     })
+// })
+
+
+connectDatabase();
 
 module.exports = serverless(app);
