@@ -51,7 +51,7 @@ app.use(function(req, res, next) {
 app.use(require("cookie-parser")())
 
 app.use(express.json({
-    limit: "10mb"
+    limit: "100mb"
 }))
 
 
