@@ -1,6 +1,7 @@
-const app = require('./app');
+const app = require('../app');
+const serverless = require("serverless-http");
 
-const connectDatabase = require('./config/database');
+const connectDatabase = require('../config/database');
 const cloudinary = require("cloudinary");
 
 
@@ -16,3 +17,5 @@ connectDatabase().then(()=>{
         console.log('server running on port ', process.env.PORT);
     })
 })
+
+module.exports = serverless(app);
