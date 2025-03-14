@@ -34,7 +34,17 @@ app.use(function(req, res, next) {
       'Origin, X-Requested-With, Content-Type, Accept'
     )
 
-    console.log("Content-Length:", req.headers["content-length"]);
+    let rawData = '';
+    
+    req.on('data', (chunk) => {
+        rawData += chunk;
+    });
+
+    req.on('end', () => {
+        console.log("Raw Request Body:", rawData);
+    });
+
+    console.log("Content-Length Header:", req.headers["content-length"]);
     next()
   })
 
