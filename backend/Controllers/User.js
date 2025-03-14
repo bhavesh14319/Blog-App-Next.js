@@ -69,6 +69,7 @@ const registerUser = async (req,res)=>{
 
 const loginUser = async (req,res)=>{
     try{
+        console.log("Content-Length:", req.headers["content-length"]);
         const{email,password} = req.body;
         
         const user = await User.findOne({email}).select("+password").populate("blogs");
